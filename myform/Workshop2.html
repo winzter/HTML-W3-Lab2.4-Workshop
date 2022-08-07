@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+        <input 
+            type="text" 
+            name="1" 
+            required 
+            pattern="([aeiou]|[AEIOU])([aeiou]|[AEIOU])([aeiou]|[AEIOU])"
+        >
+        <label for="1">1.เป็นสระในภาษาอังกฤาเท่านั้นและมีได้ 3 ตัว</label>
+        <br>
+
+        <input 
+            type="text" 
+            name="2"  
+            required 
+            pattern="[A-Z][a-z]+"
+        >
+        <label for="2">2.ขึ้นต้นด้วยพิมพ์ใหญ่ตัวแรก ที่เหลือเป็นอักษรพิมพ์เล็กตั้งแต่ 1 ตัวขึ้นไป</label>
+        <br>
+        <input 
+            type="text" 
+            name="3" 
+            required 
+            pattern="(^ord|^order)\d{5}"
+        >
+        <label for="3">3.ขึ้นต้นด้วย ord หรือ order ลงท้ายด้วยตัวเลข 5 ตัว</label>
+        <br>
+
+        <input 
+            type="text" 
+            name="4" 
+            required 
+            pattern="(fr|[bc]l)og"
+        >
+        <label for="4">4.เป็นคำว่า frog หรือ blog หรือ clog เท่านั้น</label>
+        <br>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+</body>
+</html>

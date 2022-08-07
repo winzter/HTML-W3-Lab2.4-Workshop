@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+        <label for="username">USERNAME :</label>
+        <input 
+            type="text" 
+            name="username" 
+            placeholder="Username" 
+            required 
+            id="username"
+        >
+
+        <br>
+        <label for="">สาขาวิชา:</label>
+        <select name="dept">
+            <option value="">--Please choose an option--</option>
+            <option value="CS">CS</option>
+            <option value="IC">IC</option>
+            <option value="MA">MA</option>
+            <option value="IMI">IMI</option>
+            <option value="AS">AS</option>
+            <option value="AFET">AFET</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="Eng_name">1.กรอกชื่อด้วยภาษาอังกฤษ อัขระตัวใหญ่เท่านั้น</label>
+        <br>
+        <input type="text" name="Eng_name" id="Eng_name" required pattern="[A-Z]+">
+        <br>
+
+        <label for="student_id">2."รหัสนักศึกษา" มี-คั่นตามรูปแบบนี้ เช่น 61-040626-1234-5</label>
+        <br>
+        <input type="text" name="student_id" id="student_id" required pattern="\d{2}-\d{6}-\d{4}-\d">
+        <br>
+
+        <label for="product_id">3."รหัสสินค้า 3 ตัวแรกเป็นอัขระตัวใหญ่ตามด้วยตัวเลข 2 ตัว เท่านั้น" เช่น AAA89</label>
+        <br>
+        <input type="text" name="product_id" id="product_id" required pattern="[A-Z]{3}\d{2}">
+        <br>
+
+        <label for="Thai_name">4.กรอกชื่อด้วยภาษาไทยเท่านั้น</label>
+        <br>
+        <input type="text" name="Thai_name" id="Thai_name" required pattern="[ก-๛]+">
+        <p><input type="submit" value="Submit"></p>
+    </form>
+</body>
+</html>
